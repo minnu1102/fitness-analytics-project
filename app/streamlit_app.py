@@ -4,7 +4,7 @@ import pandas as pd
 import altair as alt
 
 st.title('Fitness Analytics Dashboard')
-df = pd.read_csv('../data/fitness_data.csv', parse_dates=['date'])
+df = pd.read_csv('data/fitness_data.csv', parse_dates=['date'])
 st.sidebar.write('Data: {} rows'.format(len(df)))
 
 user = st.sidebar.selectbox('Select user', sorted(df['user_id'].unique()))
